@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.1.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "943b40d4336c1e174ac0132d5cd53ca5",
+      "MD5-CAM-1.0.1" : "771537f907ebc93db9b87e795f7e4e71",
       "PARENT:MD5-CAM-1.0.1" : "41914AB89EC39C22523B4461C349BB17"
     },
     "details" : {
@@ -484,7 +484,7 @@
           "/data[at0001]/items[at0009]/items[at0020]" : {
             "source" : "FHIR, openEHR,DAM"
           },
-          "/data[at0001]/items[at0063]" : {
+          "/data[at0001]/items[at0063.1]" : {
             "source" : "FHIR, DAM"
           }
         },
@@ -579,7 +579,7 @@
           "/data[at0001]/items[at0009]/items[at0020]" : {
             "source" : "FHIR, openEHR, DAM"
           },
-          "/data[at0001]/items[at0063]" : {
+          "/data[at0001]/items[at0063.1]" : {
             "source" : "FHIR, DAM"
           }
         },
@@ -659,7 +659,7 @@
           "/data[at0001]/items[at0009]/items[at0020]" : {
             "source" : "FHIR, openEHR,DAM"
           },
-          "/data[at0001]/items[at0063]" : {
+          "/data[at0001]/items[at0063.1]" : {
             "source" : "FHIR, DAM"
           }
         }
@@ -675,7 +675,41 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "EVALUATION",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0063.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
@@ -690,7 +724,23 @@
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0127", "at0064", "at0065", "at0067", "at0066" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "773f657b-9a49-4e50-bb88-ef1d245b845e",
